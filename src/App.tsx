@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/profile', {
+        const response = await fetch('http://django-service.default.svc.cluster.local:8001/api/profile', {
           headers: {'Content-Type': 'application/json'},
           credentials: 'include',
         });

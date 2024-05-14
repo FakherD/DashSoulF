@@ -12,7 +12,7 @@ const Register = () => {
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
        
-        const response =await fetch('http://localhost:8000/api/register', {
+        const response =await fetch('http://django-service.default.svc.cluster.local:8001/api/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

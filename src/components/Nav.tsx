@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = (props: {firstname:string, setName: (firstname: string) => void}) => {
   const logout = async() => {
-    await fetch('http://localhost:8000/api/logout', {
+    await fetch('http://django-service.default.svc.cluster.local:8001/api/logout', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             credentials: 'include',

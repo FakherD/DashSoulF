@@ -8,7 +8,7 @@ const Login = (props : {setName: (firstname: string) => void}) => {
 
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
-        const response =await fetch('http://localhost:8000/api/login', {
+        const response =await fetch('http://django-service.default.svc.cluster.local:8001/api/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             credentials: 'include',
