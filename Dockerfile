@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy custom nginx configuration file
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY /deploy/nginx.conf /etc/nginx/nginx.conf
 
 # Copy the build output to replace the default nginx contents
 COPY --from=build /app/build /usr/share/nginx/html
