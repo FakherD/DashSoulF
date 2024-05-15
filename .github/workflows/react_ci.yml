@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: user/react-frontend:${{ github.sha }}
+          tags: fakherr/react-frontend:${{ github.sha }}
